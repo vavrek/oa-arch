@@ -1,4 +1,4 @@
-# oa.py - Core Open Assistant Loop
+# oa.py - Open Assistant Main Loop
 
 import signal
 from gi.repository import GObject
