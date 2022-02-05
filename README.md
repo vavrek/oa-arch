@@ -6,9 +6,9 @@ Open Assistant is an open source voice assistant able to complete operating syst
 
 Written in Python, Open Assistant uses a number of shell scripts, and is able to function offline. 
 
-Internet access is only needed for updating a commands file (language model) and for downloading information, such as news or weather. 
+Internet access is only needed to update the language model when the commands file is changed and for downloading information, such as news or weather. 
 
-Vocal recordings will never leave the machine.
+Vocal recordings never leave the machine.
 
 ## Video Demonstrations
 Version 0.00:
