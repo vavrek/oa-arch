@@ -13,62 +13,56 @@ Written in Python, Open Assistant uses a number of shell scripts, and is able to
 Internet access is only needed for updating the commands file (language model) and for downloading information, such as news or weather. Vocal recordings never leave the machine.
 
 ## Video Demonstrations
-Version 0.00: 
- [https://youtu.be/-7Vh1ny9FsQ](https://youtu.be/-7Vh1ny9FsQ)
+Version 0.00:
+[https://youtu.be/-7Vh1ny9FsQ](https://youtu.be/-7Vh1ny9FsQ)
 
-Version 0.11: 
- [https://youtu.be/_zBjn_LgiZM](https://youtu.be/_zBjn_LgiZM)
+Version 0.11:
+[https://youtu.be/_zBjn_LgiZM](https://youtu.be/_zBjn_LgiZM)
 
 Version 0.21 with TP-Link Kasa LB130 and HS300:
- [https://youtu.be/D99V9Ge9IaE](https://youtu.be/D99V9Ge9IaE)
+[https://youtu.be/D99V9Ge9IaE](https://youtu.be/D99V9Ge9IaE)
 
 ## Installation
 Download and unzip the OA source code archive into a directory of your choice.
 
 Make files `oa.sh` and `oa.py` executable with the command:
 
-    `chmod +x oa.*`
+    chmod +x oa.*
 
 Install required packages:
 
-    `sudo pacman -S aplay flite gobject-introspection gstreamer lib32-gst-plugins-base xclip xdotool`
+    sudo pacman -S aplay flite gobject-introspection gstreamer lib32-gst-plugins-base xclip xdotool yay
 
-    `pip3 python-requests python-gobject`
+    pip3 python-requests python-gobject
 
-    `yay pocketsphinx` 
-
-    (install `yay` with `pacman` if needed to access the [AUR](https://aur.archlinux.org))
+    yay pocketsphinx
 
 ## Usage
 From within the OA directory, type:
 
-    `./oa.sh`
+    ./oa.sh
 
-If you see `Stella: Listening`, Open Assistant is properly installed and running.
+If you see `Stella: Listening`, Open Assistant is properly installed and running. Congratulations. :)
 
 Say `Hello Stella` and listen for a response.
 
-If there is no response, check your microphone and speaker levels.
+If there is no response, be sure to check your microphone and speaker levels.
 
-All voice commands and actions can be found in:
+All voice commands and actions can be found in: `minds/stella/config/commands.json`
 
-    `minds/stella/config/commands.json`
-
-User specific configuration is located in:
-
-    `oa.sh`
+User specific configuration is located in: `oa.sh`
 
 ## Support
-Feel free to submit an issue or an email message for help:
+Need help? Feel free to submit an issue or send an email:
 
-    [info@openassistant.org](info@openassistant.org)
+[info@openassistant.org](info@openassistant.org)
 
 ## Contributing
-Hack away! 
+Hack away, friends! :)
 
-This is a unique and valuable project which could benefit anyone disabled, young, or elderly.
+This is a valuable and unique project which could benefit anyone disabled, young, or elderly.
 
-Let's make computing more fun, convenient, and accessible.
+Let's make computing more fun, convenient, and accessible!
 
 ## Authors and acknowledgment
 Andrew Vavrek, Clayton G. Hobbs, Jezra, Jonathan Kulp
