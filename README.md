@@ -1,16 +1,14 @@
-# oa-arch
-
-## Open Assistant
+## Open Assistant - Arch Linux Version
 Open Source Voice Assistant - Make Your Own Minds
 
-Arch Linux Version
-
 ## Description
-Open Assistant is an open source voice assistant prototype able to complete operating system tasks using vocal commands.
+Open Assistant is an open source voice assistant able to complete operating system tasks using spoken commands.
 
 Written in Python, Open Assistant uses a number of shell scripts, and is able to function offline. 
 
-Internet access is only needed for updating the commands file (language model) and for downloading information, such as news or weather. Vocal recordings never leave the machine.
+Internet access is only needed for updating a commands file (language model) and for downloading information, such as news or weather. 
+
+Vocal recordings will never leave the machine.
 
 ## Video Demonstrations
 Version 0.00:
@@ -23,7 +21,7 @@ Version 0.21 with TP-Link Kasa LB130 and HS300:
 [https://youtu.be/D99V9Ge9IaE](https://youtu.be/D99V9Ge9IaE)
 
 ## Installation
-Download and unzip the OA source code archive into a directory of your choice.
+Download and unzip the Open Assistant source code archive into a directory of your choice.
 
 Make files `oa.sh` and `oa.py` executable with the command:
 
@@ -33,7 +31,9 @@ Install required packages:
 
     sudo pacman -S aplay flite gobject-introspection gstreamer lib32-gst-plugins-base xclip xdotool yay
 
+
     pip3 python-requests python-gobject
+
 
     yay pocketsphinx
 
@@ -60,9 +60,9 @@ Need help? Feel free to submit an issue or send an email:
 ## Contributing
 Hack away, friends! :)
 
-This is a valuable and unique project which could benefit anyone disabled, young, or elderly.
+This is a unique and valuable project which could benefit anyone disabled, young, or elderly.
 
-Let's make computing more fun, convenient, and accessible!
+Let's make computing more fun, convenient, private, and accessible!
 
 ## Authors and acknowledgment
 Andrew Vavrek, Clayton G. Hobbs, Jezra, Jonathan Kulp
