@@ -46,9 +46,9 @@ If you see `Stella: Listening`, Open Assistant is properly installed and running
 
 Say `Hello Stella` and listen for a response.
 
-If there is no response, be sure to check your microphone and speaker levels.
+If there is no response, be sure to check your microphone and speaker levels. `mic-test.sh` has been included for convenient recording tests.
 
-All voice commands and actions can be found in: `minds/stella/config/commands.json`
+Voice commands and actions can be found in: `minds/stella/config/commands.json`
 
 User specific configuration is located in: `oa.sh`
 
