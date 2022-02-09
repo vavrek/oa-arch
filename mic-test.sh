@@ -8,7 +8,7 @@ function complete {
   rm mic-test.wav
 }
 
-trap finish EXIT
+trap complete EXIT
 
 printf "Launching ALSA recording test.\n Recognized input devices: \n"
 
