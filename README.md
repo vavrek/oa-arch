@@ -4,7 +4,7 @@ Open Source Voice Assistant - Make Your Own Minds
 ## Description
 Open Assistant is an open source voice assistant able to complete operating system tasks using spoken commands.
 
-Written in Python, Open Assistant uses a number of shell scripts, and is able to function offline. 
+Written in Python, Open Assistant also uses a number of bash shell scripts, and is able to function offline. 
 
 Internet access is only needed to update the language model when the commands file is changed or for downloading information, such as news or weather. 
 
@@ -60,9 +60,18 @@ Need help? Feel free to submit an issue or send an email:
 ## Contributing
 Hack away, friends! :)
 
-This is a unique and valuable project which could benefit anyone disabled, young, or elderly.
+Open Assistant is a unique and valuable project which could benefit anyone disabled, young, or elderly.
 
 Let's make computing more fun, convenient, private, and accessible!
+
+## Roadmap
+Currently working to include a local language model toolkit, so OA will not require internet access to update commands. 
+
+A comprehensive mapping of voice commands to all available keyboard shortcuts needs to be completed. 
+
+Speech dictation is under development, with a new demo coming soon!
+
+One small step at a time...
 
 ## Authors and acknowledgment
 Andrew Vavrek, Clayton G. Hobbs, Jezra, Jonathan Kulp
