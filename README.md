@@ -6,7 +6,7 @@ Open Assistant is an open source voice assistant able to complete operating syst
 
 Written in Python, Open Assistant uses a number of shell scripts, and is able to function offline. 
 
-Internet access is only needed to update the language model when the commands file is changed and for downloading information, such as news or weather. 
+Internet access is only needed to update the language model when the commands file is changed or for downloading information, such as news or weather. 
 
 Vocal recordings never leave the machine.
 
@@ -35,7 +35,7 @@ Install required packages:
     pip3 python-requests python-gobject
 
 
-    yay pocketsphinx
+    yay pocketsphinx sphinxbase
 
 ## Usage
 From within the OA directory, type:
