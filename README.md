@@ -23,9 +23,9 @@ Version 0.21 with TP-Link Kasa LB130 and HS300:
 ## Installation
 Download and unzip the Open Assistant source code archive into a directory of your choice.
 
-Make files `oa.sh` and `oa.py` executable with the command:
+Enter this directory and make the file `oa.sh` executable with this command:
 
-    chmod +x oa.*
+    chmod +x oa.sh
 
 Install required packages:
 
