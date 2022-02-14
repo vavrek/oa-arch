@@ -67,9 +67,11 @@ Let's make computing more fun, convenient, private, and accessible!
 ## Roadmap
 Currently working to include a local language model toolkit, so OA will not require internet access to update commands. 
 
-A comprehensive mapping of voice commands to all available keyboard shortcuts needs to be completed. 
+A comprehensive mapping of voice commands to all available keyboard shortcuts needs to be completed.
 
-Speech dictation is under development, with a new demo coming soon!
+Offline speech dictation is under development, with a new video demo coming soon.
+
+Porting to all common Linux distributions, GUI design, and creating convenient package installers are all on the list.
 
 One small step at a time...
 
