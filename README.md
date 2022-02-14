@@ -53,6 +53,8 @@ Voice commands and actions can be found in: `minds/stella/config/commands.json`
 User specific configuration is located in: `oa.sh`
 
 ## Support
+Become a patron! https://www.patreon.com/openassistant
+
 Need help? Feel free to submit an issue or send an email:
 
 [info@openassistant.org](info@openassistant.org)
