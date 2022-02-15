@@ -64,13 +64,15 @@ yay pocketsphinx sphinxbase
 ## Usage
 From within the Open Assistant directory, type:
 
-```./oa.sh```
+```
+./oa.sh
+```
 
-If you see `Stella: Listening`, Open Assistant is properly installed and running.
+If you see **Stella: Listening**, Open Assistant is properly installed and running.
 
 Congratulations. :)
 
-Say `Hello Stella` and listen for a response.
+Say **Hello Stella** and listen for a response.
 
 If there is no response, be sure to check your microphone and speaker levels.
 
@@ -80,7 +82,7 @@ You can also try a recording test:
 ./mic-test.sh
 ```
 
-Voice commands and actions can be found in: `minds/stella/config/commands.json`
+Vocal commands and actions are found in: `minds/stella/config/commands.json`
 
 User specific configuration is located in: `oa.sh`
 
