@@ -4,7 +4,7 @@
 
 # Global Settings
 
-export ADDRESS="vavrek@vavrek.com"
+export ADDRESS="info@openassistant.org"
 export AUDIOPLAYER="aplay"
 export BROWSER="librewolf"
 export CLICK="xdotool click"
@@ -12,12 +12,10 @@ export EDITOR="subl"
 export EMAIL="thunderbird"
 export FILE="thunar"
 export KEY="xdotool key"
-export KILL="pkill -o -f "
+export KILL="pkill -f "
 export LAUNCH="python3 ./oa.py -c -m 0"
-export MASTERPASS="password"
 export MINDDIR="$PWD/minds/stella"
 export OADDIR="$PWD"
-export PASSWORD="password"
 export SEARCHFILES="catfish"
 export SEARCHWEB="https://duckduckgo.com"
 export STATUS="bpytop"
