@@ -1,7 +1,6 @@
 {
 "commands": {
     "back flip": "$KEY Alt+Tab",
-    "begin dictation": "nerd-dictation begin &",
     "brightness down": "xbacklight -dec 22",
     "brightness up": "xbacklight -inc 22",
     "bye stella": "echo bye $USERNAME | $VOICE && $KILL oa.py",
