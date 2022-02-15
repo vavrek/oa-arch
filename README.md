@@ -23,9 +23,9 @@ Version 0.21 with TP-Link Kasa LB130 and HS300:
 ## Installation
 Open a terminal and download the Open Assistant source code archive:
 
-```
-wget https://gitlab.com/open-assistant/oa-arch/-/archive/main/oa-arch-main.zip
-```
+   ```
+   wget https://gitlab.com/open-assistant/oa-arch/-/archive/main/oa-arch-main.zip
+   ```
 
 Unzip the package:
 
