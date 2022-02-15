@@ -45,13 +45,13 @@ find ./ -name "*.sh" -exec chmod +x {} \;
 
 Install required packages:
 ```
-sudo pacman -S flite gobject-introspection gstreamer gst-plugins-base-libs pip python3 swig xclip xdotool
+sudo pacman -S flite gobject-introspection gstreamer gst-plugins-base-libs python3 xclip xdotool
 ```
 ```
 pip install requests gobject
 ```
 
-Use ``yay`` to install ``pocketsphinx`` then ``sphinxbase``:
+Use ``yay`` to install ``pocketsphinx`` and ``sphinxbase``:
 ```
 yay pocketsphinx
 ```
