@@ -2,6 +2,6 @@
 
 # reset.sh - Open Assistant Reset Script
 
-kill -9 `ps -A | awk ' ($4=="oa.py") {print $1}'`
+pkill -f "python3 ./oa.py -c -m 0"
 
-$OADIR/oa.sh
+./oa.sh
