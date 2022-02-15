@@ -1,4 +1,5 @@
 back flip
+begin dictation
 brightness down
 brightness up
 bye stella
@@ -8,6 +9,7 @@ close browser
 close editor
 close email
 close other tabs
+close spiral
 close status
 close tab
 close terminal
@@ -17,13 +19,12 @@ email
 end of file
 end of line
 end of page
-exit terminal
 eye pee address
 find in file
 full screen
 good bye stella
+goto chat
 goto edit
-goto email
 goto file
 goto mail
 goto music
@@ -58,6 +59,7 @@ open file
 open files
 open launcher
 open new tab
+open spiral
 open status
 open tab
 open terminal
@@ -97,12 +99,10 @@ read this text
 read world news
 reload page
 rename file
-repeat after me
 replace in file
 reset stella
 right click
 run diagnostics
-run inxi
 run speed test
 save file
 scroll down
@@ -112,13 +112,13 @@ search web
 select all
 select line
 show desktop
-show spiral
 show window
 shuffle music
 sing a song
 start of line
 status
 stella
+stop listening
 switch tab
 system status
 tell me a joke
@@ -129,11 +129,8 @@ time is it
 top of file
 top of page
 type email address
-type master password
-type password
 undo close tab
 unmute audio
-update language model
 volume down
 volume up
 web
@@ -147,7 +144,5 @@ what time is
 what time is it
 wheel down
 wheel up
-wifi down
-wifi up
 zoom in
 zoom out

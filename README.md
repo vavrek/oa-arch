@@ -21,7 +21,7 @@ Version 0.21 with TP-Link Kasa LB130 and HS300:
 [https://youtu.be/D99V9Ge9IaE](https://youtu.be/D99V9Ge9IaE)
 
 ## Installation
-To begin, install ``git`` and ``yay`` if not already present on your system:
+Install ``git`` and ``yay`` if not already present on your system:
 
 ```
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
@@ -78,7 +78,7 @@ You can also try a recording test:
 ```
 Vocal commands and actions are found in: `minds/stella/config/commands.json`
 
-User specific configuration is located in: `oa.sh`
+User specific system configuration is located in: `oa.sh`
 
 ## Support
 Become a patron! https://www.patreon.com/openassistant
