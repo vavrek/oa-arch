@@ -31,7 +31,7 @@ unzip oa-arch-main.zip
 ```
 Rename the directory to "oa" and enter it:
 ```
-mv oa-arch-main oa; cd oa;
+mv oa-arch-main oa && cd oa;
 ```
 Make all contained shell scripts executable:
 ```
@@ -39,14 +39,14 @@ find ./ -name "*.sh" -exec chmod +x {} \;
 ```
 Install required packages:
 ```
-sudo pacman -S flite gobject-introspection gstreamer lib32-gst-plugins-base xclip xdotool
+sudo pacman -S flite gobject-introspection gstreamer gst-plugins-base-libs pip python3 swig xclip xdotool
 ```
 ```
-pip3 python-requests python-gobject
+pip install requests gobject
 ```
 Install ``git`` and ``yay`` if needed:
 ```
-pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```
 Use ``yay`` to install ``pocketsphinx``:
 ```
