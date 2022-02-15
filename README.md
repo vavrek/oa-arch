@@ -21,11 +21,21 @@ Version 0.21 with TP-Link Kasa LB130 and HS300:
 [https://youtu.be/D99V9Ge9IaE](https://youtu.be/D99V9Ge9IaE)
 
 ## Installation
-Download and unzip the Open Assistant source code archive into a directory of your choice.
+Open a terminal and download the Open Assistant source code archive:
+    
+    wget https://gitlab.com/open-assistant/oa-arch/-/archive/main/oa-arch-main.zip
 
-Enter this directory and make the file `oa.sh` executable with this command:
+Unzip the package:
 
-    chmod +x oa.sh
+    unzip oa-arch-main.zip
+
+Rename the directory to "oa" and enter it:
+
+    mv oa-arch-main oa; cd oa;
+
+Nake all shell scripts executable:
+
+    find ./ -name "*.sh" -exec chmod +x {} \;
 
 Install required packages:
 
@@ -38,15 +48,19 @@ Install required packages:
     yay pocketsphinx sphinxbase
 
 ## Usage
-From within the OA directory, type:
+From within the Open Assistant directory, type:
 
     ./oa.sh
 
-If you see `Stella: Listening`, Open Assistant is properly installed and running. Congratulations. :)
+If you see `Stella: Listening`, Open Assistant is properly installed and running.
+
+Congratulations. :)
 
 Say `Hello Stella` and listen for a response.
 
-If there is no response, be sure to check your microphone and speaker levels. `mic-test.sh` has been included for convenient recording tests.
+If there is no response, be sure to check your microphone and speaker levels. 
+
+`mic-test.sh` has been included for convenient recording tests.
 
 Voice commands and actions can be found in: `minds/stella/config/commands.json`
 

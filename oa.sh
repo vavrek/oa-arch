@@ -4,11 +4,11 @@
 
 # Global Settings
 
-export ADDRESS="your@address.com"
+export ADDRESS="vavrek@vavrek.com"
 export AUDIOPLAYER="aplay"
-export BROWSER="firefox"
+export BROWSER="librewolf"
 export CLICK="xdotool click"
-export EDITOR="vim"
+export EDITOR="subl"
 export EMAIL="thunderbird"
 export FILE="thunar"
 export KEY="xdotool key"
@@ -23,7 +23,7 @@ export SEARCHWEB="https://duckduckgo.com"
 export STATUS="bpytop"
 export TYPE="xdotool type"
 export USERNAME=$(whoami)
-export VOICE="flite -voice slt --setf int_f0_target_mean=263 --setf duration_stretch=1.11 --setf int_f0_target_stddev=27"
+export VOICE="flite -voice slt --setf int_f0_target_mean=263 --setf duration_stretch=1.22 --setf int_f0_target_stddev=27"
 export TERMINAL="xfce4-terminal --maximize"
 
 # Launch Open Assistant

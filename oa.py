@@ -1,7 +1,7 @@
-# oa.py - Open Assistant Main Loop
+# oa.py - Core Open Assistant Loop
 
 import signal
-from gi.repository import GObject
+from gi.repository import GLib
 from core import Assistant
 
 if __name__ == '__main__':
@@ -9,7 +9,7 @@ if __name__ == '__main__':
     a = Assistant()
 
     # Create Main Loop
-    main_loop = GObject.MainLoop()
+    main_loop = GLib.MainLoop()
 
     # Handle Signal Interrupts
     signal.signal(signal.SIGINT, signal.SIG_DFL)
