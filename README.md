@@ -22,21 +22,27 @@ Version 0.21 with TP-Link Kasa LB130 and HS300:
 
 ## Installation
 To begin, install ``git`` and ``yay`` if not already present on your system:
+
 ```
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```
+
 From your home directory, download and unzip the Open Assistant source code:
+
 ```
 cd ~ && wget https://gitlab.com/open-assistant/oa-arch/-/archive/main/oa-arch-main.zip && unzip oa-arch-main.zip
 ```
+
 Rename the directory to "oa" and enter it:
 ```
 mv oa-arch-main oa && cd oa;
 ```
+
 Make all contained shell scripts executable:
 ```
 find ./ -name "*.sh" -exec chmod +x {} \;
 ```
+
 Install required packages:
 ```
 sudo pacman -S flite gobject-introspection gstreamer gst-plugins-base-libs pip python3 swig xclip xdotool
@@ -44,7 +50,7 @@ sudo pacman -S flite gobject-introspection gstreamer gst-plugins-base-libs pip p
 ```
 pip install requests gobject
 ```
-```
+
 Use ``yay`` to install ``pocketsphinx`` then ``sphinxbase``:
 ```
 yay pocketsphinx
