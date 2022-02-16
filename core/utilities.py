@@ -10,14 +10,12 @@ import requests
 
 NET_TEST_SERVER = "http://www.speech.cs.cmu.edu"
 
-
-
 class Config:
     """OA Configuration"""
     
     # Setup Directories
     mind_dir = os.environ['MINDDIR']
-    conf_dir = os.path.join(mind_dir, 'config')
+    conf_dir = os.path.join(mind_dir, 'abilities')
     cache_dir = os.path.join(mind_dir, 'cache')
     data_dir = os.path.join(mind_dir, 'language')
 
@@ -122,7 +120,7 @@ class Hasher:
 
 
 class LanguageUpdater:
-    """Update Language Model Using The CMU Online 'lmtool' If The Command File Has Changed"""
+    """Update Language Model With CMU Online 'lmtool' If Commands File Has Changed"""
     def __init__(self, config):
         self.config = config
         self.hasher = Hasher(config)

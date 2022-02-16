@@ -1,6 +1,7 @@
 {
 "commands": {
     "back flip": "$KEY Alt+Tab",
+    "begin dictation": "nerd-dictation begin &",
     "brightness down": "xbacklight -dec 22",
     "brightness up": "xbacklight -inc 22",
     "bye stella": "echo bye $USERNAME | $VOICE && $KILL oa.py",
@@ -16,7 +17,6 @@
     "close terminal": "$KEY Control+d",
     "close window": "$KEY Alt+F4",
     "day is it": "date +%A | $VOICE",
-    "email": "$EMAIL &",
     "end of file": "$KEY Control+End",
     "end of line": "$KEY End",
     "end of page": "$KEY Control+End",
@@ -32,7 +32,6 @@
     "goto text": "$KEY Alt+6",
     "goto system": "$KEY Alt+4",
     "goto web": "$KEY Alt+2",
-    "web": "$KEY Alt+2",
     "hello": "$MINDDIR/abilities/greeting.sh",
     "hello stella": "$MINDDIR/abilities/greeting.sh",
     "hi stella": "$MINDDIR/abilities/greeting.sh",
@@ -43,7 +42,6 @@
     "maximize window": "$KEY Alt+F5",
     "middle click": "$CLICK 2",
     "minimize window": "$KEY Alt+F9",
-    "music": "$KEY Alt+8",
     "mute audio": "pamixer --mute",
     "mute microphone": "echo muted | $VOICE & amixer -c 0 sset Capture nocap",
     "new file": "$KEY Control+n",
@@ -126,7 +124,6 @@
     "switch tab": "$KEY Control+Tab",
     "system status": "$TERMINAL --command=$STATUS &",
     "tell me a joke": "shuf -n 1 $MINDDIR/abilities/jokes | tee /dev/tty | $VOICE",
-    "time": "date +%l:%M:%P | $VOICE",
     "time is": "date +%l:%M:%P | $VOICE",
     "time is it": "date +%l:%M:%P | $VOICE",
     "test network speed": "echo running speed test | $VOICE && speedtest | tee /dev/tty | grep -i \"Download\\|Upload\" | $VOICE &",
@@ -147,7 +144,6 @@
     "what time": "date +%l:%M:%P | $VOICE",
     "wheel up": "$CLICK 4 && $CLICK 4 && $CLICK 4 && $CLICK 4",
     "wheel down": "$CLICK 5 && $CLICK 5 && $CLICK 5 && $CLICK 5",
-    "web": "$BROWSER",
     "zoom in": "$KEY Control+equal Control+equal Control+equal",
     "zoom out": "$KEY Control+minus Control+minus $KEY Control+minus"
 },

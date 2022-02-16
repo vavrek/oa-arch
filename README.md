@@ -22,27 +22,21 @@ Version 0.21 with TP-Link Kasa LB130 and HS300:
 
 ## Installation
 Install ``git`` and ``yay`` if not already present on your system:
-
 ```
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```
-
 From your home directory, download and unzip the Open Assistant source code:
-
 ```
 cd ~ && wget https://gitlab.com/open-assistant/oa-arch/-/archive/main/oa-arch-main.zip && unzip oa-arch-main.zip
 ```
-
 Rename the directory to "oa" and enter it:
 ```
 mv oa-arch-main oa && cd oa;
 ```
-
 Make all contained shell scripts executable:
 ```
 find ./ -name "*.sh" -exec chmod +x {} \;
 ```
-
 Install required packages:
 ```
 sudo pacman -S flite gobject-introspection gstreamer gst-plugins-base-libs python3 xclip xdotool
@@ -50,13 +44,16 @@ sudo pacman -S flite gobject-introspection gstreamer gst-plugins-base-libs pytho
 ```
 pip install requests gobject
 ```
-
 Use ``yay`` to install ``pocketsphinx`` and ``sphinxbase``:
 ```
 yay pocketsphinx
 ```
 ```
 yay sphinxbase
+```
+KDE / Konsole users will also require ``qt-gstreamer``:
+```
+yay qt-gstreamer
 ```
 
 ## Usage
@@ -76,7 +73,7 @@ You can also try a recording test:
 ```
 ./mic-test.sh
 ```
-Vocal commands and actions are found in: `minds/stella/config/commands.json`
+Vocal commands and actions are found in: `minds/stella/abilities/commands.json`
 
 User specific system configuration is located in: `oa.sh`
 
@@ -101,7 +98,7 @@ A comprehensive mapping of voice commands to all available keyboard shortcuts ne
 
 Offline speech dictation is under development, with a new video demo coming soon.
 
-Porting to all common Linux distributions, GUI design, and creating convenient package installers are all on the list.
+Porting to all common Linux distributions, Window Managers, GUI design, and creating convenient package installers are all on the list.
 
 One small step at a time...
 
