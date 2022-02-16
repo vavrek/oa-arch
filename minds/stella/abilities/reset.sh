@@ -4,4 +4,4 @@
 
 pkill -f "python3 ./oa.py -c -m 0"
 
-./oa.sh
+./oa.sh 
