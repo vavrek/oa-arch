@@ -1,7 +1,6 @@
 {
 "commands": {
     "back flip": "$KEY Alt+Tab",
-    "begin dictation": "nerd-dictation begin &",
     "brightness down": "xbacklight -dec 22",
     "brightness up": "xbacklight -inc 22",
     "bye stella": "echo bye $USERNAME | $VOICE && $KILL oa.py",
@@ -139,6 +138,7 @@
     "what day is it": "date +%A | $VOICE",
     "what is the date": "$MINDDIR/abilities/date.sh | $VOICE",
     "what is the time": "date +%l:%M:%P | $VOICE",
+    "what is the weather": "$MINDDIR/abilities/weather.py | tee /dev/tty | $VOICE",
     "what time is it": "date +%l:%M:%P | $VOICE",
     "what time is": "date +%l:%M:%P | $VOICE",
     "what time": "date +%l:%M:%P | $VOICE",
