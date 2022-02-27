@@ -73,7 +73,7 @@ You can also try a recording test:
 ```
 ./mic-test.sh
 ```
-Vocal commands and actions are found in: ``minds/stella/abilities/commands.json``
+Vocal commands and abilities are found in: ``minds/stella/abilities/commands.json``
 
 After changing the commands file, reset OA, say **Update Commands**, then reset again. 
 
