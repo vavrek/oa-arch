@@ -82,7 +82,7 @@ User specific system configuration is located in: [https://gitlab.com/open-assis
 ## Support
 Need help? Feel free to submit an issue or send an email:
 
-[info@openassistant.org](info@openassistant.org)
+[info@openassistant.org](mailto:info@openassistant.org)
 
 ## Contributing
 Open Assistant is a unique and valuable project which could benefit anyone disabled, young, or elderly.
