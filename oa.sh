@@ -6,7 +6,7 @@
 
 export ADDRESS="info@openassistant.org"
 export AUDIOPLAYER="aplay"
-export BROWSER="librewolf"
+export BROWSER="qutebrowser"
 export CLICK="xdotool click"
 export EDITOR="subl"
 export EMAIL="thunderbird"
@@ -26,4 +26,6 @@ export TERMINAL="xfce4-terminal --maximize"
 
 # Launch Open Assistant
 
-python3 ./oa.py -c -m 0
+# $MINDDIR/language/quick-lm.pl -s $MINDDIR/language/commands;
+
+python3 ./oa.py -c -m 0;

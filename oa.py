@@ -6,7 +6,7 @@ from core import Assistant
 
 if __name__ == '__main__':
     # Create Assistant
-    a = Assistant()
+    assistant = Assistant()
 
     # Create Main Loop
     main_loop = GLib.MainLoop()
@@ -15,8 +15,7 @@ if __name__ == '__main__':
     signal.signal(signal.SIGINT, signal.SIG_DFL)
 
     # Run Assistant
-    # a.setup_mic()
-    a.run()
+    assistant.run()
 
     # Start Main Loop
     try:

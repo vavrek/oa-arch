@@ -1,153 +1,156 @@
-A	AH
-A(2)	EY
-ADDRESS	AE D R EH S
-ALL	AO L
-ARE	AA R
-ARE(2)	ER
-ASSISTANT	AH S IH S T AH N T
-AUDIO	AA D IY OW
-BACK	B AE K
-BACKSPACE	B AE K S P EY S
-BOOKMARKS	B UH K M AA R K S
-BREAK	B R EY K
-BRIGHTNESS	B R AY T N AH S
-BROWSER	B R AW Z ER
-BYE	B AY
-CANCEL	K AE N S AH L
-CHAT	CH AE T
-CLEAR	K L IH R
-CLICK	K L IH K
-CLOSE	K L OW S
-CLOSE(2)	K L OW Z
-CLOSED	K L OW Z D
-COMMANDS	K AH M AE N D Z
-COPY	K AA P IY
-CUT	K AH T
-DATE	D EY T
-DAY	D EY
-DELETE	D IH L IY T
-DESKTOP	D EH S K T AA P
-DIAGNOSTICS	D AY AH G N AA S T IH K S
-DOWN	D AW N
-EDIT	EH D AH T
-EDITOR	EH D AH T ER
-EDITOR(2)	EH D IH T ER
-EMAIL	IY M EY L
-END	EH N D
-ENTER	EH N T ER
-ENTER(2)	EH N ER
-ESCAPE	IH S K EY P
-EYE	AY
-FILE	F AY L
-FILES	F AY L Z
-FIND	F AY N D
-FLIP	F L IH P
-FULL	F UH L
-FUTURE	F Y UW CH ER
-GOOD	G UH D
-GOOD(2)	G IH D
-GOTO	G OW T UW
-GOTO(2)	G OW T OW
-HELLO	HH AH L OW
-HELLO(2)	HH EH L OW
-HI	HH AY
-HOME	HH OW M
-HOW	HH AW
-IN	IH N
-IS	IH Z
-IT	IH T
-JOKE	JH OW K
-LAUNCHER	L AO N CH ER
-LEFT	L EH F T
-LINE	L AY N
-LISTENING	L IH S AH N IH NG
-LISTENING(2)	L IH S N IH NG
-MAIL	M EY L
-MAXIMIZE	M AE K S AH M AY Z
-ME	M IY
-MICROPHONE	M AY K R AH F OW N
-MIDDLE	M IH D AH L
-MINIMIZE	M IH N AH M AY Z
-MUCH	M AH CH
-MUSIC	M Y UW Z IH K
-MUTE	M Y UW T
-NETWORK	N EH T W ER K
-NEW	N UW
-NEW(2)	N Y UW
-NEWS	N UW Z
-NEWS(2)	N Y UW Z
-NEXT	N EH K S T
-NEXT(2)	N EH K S
-OF	AH V
-OLD	OW L D
-OPEN	OW P AH N
-OTHER	AH DH ER
-OUT	AW T
-PAGE	P EY JH
-PASTE	P EY S T
-PAUSE	P AO Z
-PEE	P IY
-PLAY	P L EY
-PRESS	P R EH S
-PREVIOUS	P R IY V IY AH S
-READ	R EH D
-READ(2)	R IY D
-REDO	R IY D UW
-RELOAD	R IY L OW D
-RENAME	R IY N EY M
-REPLACE	R IY P L EY S
-REPLACE(2)	ER P L EY S
-RESET	R IY S EH T
-RETURN	R IH T ER N
-RETURN(2)	R IY T ER N
-RIGHT	R AY T
-RUN	R AH N
-SAVE	S EY V
-SCREEN	S K R IY N
-SCROLL	S K R OW L
-SEARCH	S ER CH
-SELECT	S AH L EH K T
-SHOW	SH OW
-SHUFFLE	SH AH F AH L
-SING	S IH NG
-SONG	S AO NG
-SPEED	S P IY D
-SPIRAL	S P AY R AH L
-START	S T AA R T
-STATUS	S T AE T AH S
-STATUS(2)	S T EY T AH S
-STELLA	S T EH L AH
-STOP	S T AA P
-SWITCH	S W IH CH
-SYSTEM	S IH S T AH M
-TAB	T AE B
-TABS	T AE B Z
-TECHNOLOGY	T EH K N AA L AH JH IY
-TELL	T EH L
-TERMINAL	T ER M AH N AH L
-TEST	T EH S T
-TEXT	T EH K S T
-THE	DH AH
-THE(2)	DH IY
-THIS	DH IH S
-TIME	T AY M
-TOP	T AA P
-TOP(2)	T AO P
-TRACK	T R AE K
-TYPE	T AY P
-UNDO	AH N D UW
-UNMUTE	AH N M Y UW T
-UP	AH P
-VOLUME	V AA L Y UW M
-WEATHER	W EH DH ER
-WEB	W EH B
-WHAT	W AH T
-WHAT(2)	HH W AH T
-WHEEL	W IY L
-WHEEL(2)	HH W IY L
-WINDOW	W IH N D OW
-WOOD	W UH D
-WORLD	W ER L D
-YOU?	Y UW
-YOUTUBE	Y UW T UW B
-ZOOM	Z UW M
+a                             AH
+a(2)                          EY
+address                       AE D R EH S
+address(2)                    AH D R EH S
+all                           AO L
+are                           AA R
+are(2)                        ER
+assistant                     AH S IH S T AH N T
+audio                         AA D IY OW
+back                          B AE K
+bookmarks                     B UH K M AA R K S
+break                         B R EY K
+brightness                    B R AY T N AH S
+browser                       B R AW Z ER
+bye                           B AY
+cancel                        K AE N S AH L
+chat                          CH AE T
+clear                         K L IH R
+click                         K L IH K
+close                         K L OW S
+close(2)                      K L OW Z
+closed                        K L OW Z D
+coffee                        K AA F IY
+coffee(2)                     K AO F IY
+commands                      K AH M AE N D Z
+copy                          K AA P IY
+cut                           K AH T
+date                          D EY T
+day                           D EY
+delete                        D IH L IY T
+desktop                       D EH S K T AA P
+diagnostics                   D AY AH G N AA S T IH K S
+down                          D AW N
+edit                          EH D AH T
+editor                        EH D AH T ER
+editor(2)                     EH D IH T ER
+email                         IY M EY L
+end                           EH N D
+enter                         EH N T ER
+enter(2)                      EH N ER
+escape                        IH S K EY P
+eye                           AY
+file                          F AY L
+files                         F AY L Z
+find                          F AY N D
+flip                          F L IH P
+full                          F UH L
+future                        F Y UW CH ER
+good                          G UH D
+good(2)                       G IH D
+goto                          G OW T UW
+goto(2)                       G OW T OW
+hello                         HH AH L OW
+hello(2)                      HH EH L OW
+hi                            HH AY
+home                          HH OW M
+how                           HH AW
+in                            IH N
+is                            IH Z
+it                            IH T
+joke                          JH OW K
+launcher                      L AO N CH ER
+left                          L EH F T
+line                          L AY N
+listening                     L IH S AH N IH NG
+listening(2)                  L IH S N IH NG
+mail                          M EY L
+maximize                      M AE K S AH M AY Z
+me                            M IY
+microphone                    M AY K R AH F OW N
+middle                        M IH D AH L
+minimize                      M IH N AH M AY Z
+much                          M AH CH
+music                         M Y UW Z IH K
+mute                          M Y UW T
+network                       N EH T W ER K
+new                           N UW
+new(2)                        N Y UW
+news                          N UW Z
+news(2)                       N Y UW Z
+next                          N EH K S T
+next(2)                       N EH K S
+of                            AH V
+old                           OW L D
+open                          OW P AH N
+other                         AH DH ER
+out                           AW T
+page                          P EY JH
+paste                         P EY S T
+pause                         P AO Z
+pee                           P IY
+play                          P L EY
+press                         P R EH S
+previous                      P R IY V IY AH S
+read                          R EH D
+read(2)                       R IY D
+redo                          R IY D UW
+reload                        R IY L OW D
+rename                        R IY N EY M
+replace                       R IY P L EY S
+replace(2)                    ER P L EY S
+reset                         R IY S EH T
+return                        R IH T ER N
+return(2)                     R IY T ER N
+right                         R AY T
+run                           R AH N
+s                             EH S
+save                          S EY V
+screen                        S K R IY N
+scroll                        S K R OW L
+search                        S ER CH
+select                        S AH L EH K T
+show                          SH OW
+shuffle                       SH AH F AH L
+sing                          S IH NG
+song                          S AO NG
+speed                         S P IY D
+spiral                        S P AY R AH L
+start                         S T AA R T
+status                        S T AE T AH S
+status(2)                     S T EY T AH S
+stella                        S T EH L AH
+stop                          S T AA P
+switch                        S W IH CH
+system                        S IH S T AH M
+tab                           T AE B
+tabs                          T AE B Z
+technology                    T EH K N AA L AH JH IY
+tell                          T EH L
+terminal                      T ER M AH N AH L
+test                          T EH S T
+text                          T EH K S T
+the                           DH AH
+the(2)                        DH IY
+this                          DH IH S
+time                          T AY M
+top                           T AA P
+top(2)                        T AO P
+track                         T R AE K
+type                          T AY P
+undo                          AH N D UW
+up                            AH P
+update                        AH P D EY T
+volume                        V AA L Y UW M
+weather                       W EH DH ER
+web                           W EH B
+what                          W AH T
+what(2)                       HH W AH T
+wheel                         W IY L
+wheel(2)                      HH W IY L
+window                        W IH N D OW
+wood                          W UH D
+world                         W ER L D
+you                           Y UW
+youtube                       Y UW T Y UW B
+zoom                          Z UW M
