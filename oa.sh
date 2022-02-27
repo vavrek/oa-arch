@@ -4,9 +4,9 @@
 
 # Global Settings
 
-export ADDRESS="your@address.com"
+export ADDRESS="info@openassistant.org"
 export AUDIOPLAYER="aplay"
-export BROWSER="libreworf"
+export BROWSER="librewolf"
 export CLICK="xdotool click"
 export EDITOR="subl"
 export EMAIL="thunderbird"
