@@ -15,7 +15,6 @@ close status
 close tab
 close terminal
 close window
-coffee
 day is it
 end of file
 end of line
@@ -38,6 +37,7 @@ hello stella
 hi stella
 how much wood
 how old are you
+james brown
 left click
 maximize window
 middle click

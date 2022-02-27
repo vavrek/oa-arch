@@ -1,19 +1,12 @@
-Language model created by QuickLM on Sun Feb 27 02:33:19 AM CET 2022
-Copyright (c) 1996-2002
-Carnegie Mellon University and Alexander I. Rudnicky
-
-This model based on a corpus of 148 sentences and 138 words
-The (fixed) discount mass is 0.5
-
 \data\
-ngram 1=138
+ngram 1=139
 ngram 2=163
 ngram 3=37
 
 \1-grams:
--2.0531  -0.3010
--2.8312 </s> -0.2972
--2.8312 <s> -0.2972
+-2.1323  -0.3010
+-2.8312 </s> -0.2978
+-2.8312 <s> -0.2978
 -2.5302 a -0.2997
 -2.5302 address -0.3010
 -2.8312 all -0.3010
@@ -25,6 +18,7 @@ ngram 3=37
 -2.8312 bookmarks -0.3010
 -2.8312 break -0.3010
 -2.5302 brightness -0.2933
+-2.8312 brown -0.3010
 -2.5302 browser -0.3010
 -2.5302 bye -0.2972
 -2.8312 cancel -0.3010
@@ -33,7 +27,6 @@ ngram 3=37
 -2.3541 click -0.3010
 -1.7898 close -0.2794
 -2.8312 closed -0.2946
--2.8312 coffee -0.2972
 -2.3541 commands -0.2946
 -2.8312 copy -0.3010
 -2.8312 cut -0.3010
@@ -58,13 +51,14 @@ ngram 3=37
 -2.8312 future -0.2991
 -2.8312 good -0.2997
 -1.8770 goto -0.2840
--2.5302 hello -0.2933
+-2.5302 hello -0.2939
 -2.8312 hi -0.2972
 -2.8312 home -0.3010
 -2.5302 how -0.2997
 -2.3541 in -0.2946
 -1.8312 is -0.2965
 -2.2292 it -0.3010
+-2.8312 james -0.3004
 -2.8312 joke -0.3010
 -2.8312 launcher -0.3010
 -2.5302 left -0.2991
@@ -116,8 +110,8 @@ ngram 3=37
 -2.5302 speed -0.2997
 -2.5302 spiral -0.3010
 -2.8312 start -0.2972
--2.2292 status -0.2972
--2.0531 stella -0.2972
+-2.2292 status -0.2978
+-2.0531 stella -0.2978
 -2.8312 stop -0.3004
 -2.8312 switch -0.2946
 -2.5302 system -0.2985
@@ -172,7 +166,6 @@ ngram 3=37
 -1.3424 close terminal -0.3010
 -1.3424 close window -0.3010
 -0.3010 closed tab -0.3010
--0.3010 coffee  -0.3010
 -0.7782 commands file -0.3010
 -0.4260 day is -0.2041
 -0.7782 email address -0.3010
@@ -199,6 +192,7 @@ ngram 3=37
 -0.4771 in file -0.3010
 -0.6990 is it -0.3010
 -0.8239 is the 0.0000
+-0.3010 james brown -0.3010
 -0.6021 left click -0.3010
 -0.3010 maximize window -0.3010
 -0.3010 me a -0.1761

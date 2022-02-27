@@ -1,84 +1,10 @@
 #!/usr/bin/perl
 
-# ====================================================================
-# Copyright (c) 1996-2002 Alexander I. Rudnicky and Carnegie Mellon University.
-# All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions
-# are met:
-#
-# 1. Redistributions of source code must retain the above copyright
-#    notice, this list of conditions and the following disclaimer. 
-#
-# 2. Redistributions in binary form must reproduce the above copyright
-#    notice, this list of conditions and the following disclaimer in
-#    the documentation and-or other materials provided with the
-#    distribution.
-#
-# 3. All copies, used or distributed, must preserve the original wording of
-#    the copyright notice included in the output file.
-#
-# This work was supported in part by funding from the Defense Advanced 
-# Research Projects Agency and the CMU Sphinx Speech Consortium.
-#
-# THIS SOFTWARE IS PROVIDED BY CARNEGIE MELLON UNIVERSITY ``AS IS'' AND 
-# ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, 
-# THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
-# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL CARNEGIE MELLON UNIVERSITY
-# NOR ITS EMPLOYEES BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
-# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, 
-# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY 
-# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
-# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
-# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
-# ====================================================================
-#
-# Pretty Good Language Modeler, now with unigram vector augmentation!
-# 
-# The Pretty Good Language Modeler is intended for quick construction 
-# of small language models, typically as might be needed in 
-# application development. Depending on the version of Perl that you 
-# are running, a practical limitation is a maximum vocabulary size on 
-# the order of 1000-2000 words. The limiting factor is the number of 
-# n-grams observed, since each n-gram is stored as a hash key. (So 
-# smaller vocabularies may turn out to be a problem as well.)
-# 
-# This package computes a stadard back-off language model. It differs 
-# in one significant respect, which is the computation of the 
-# discount. We adopt a "proportional" (or ratio) discount in which a 
-# certain percentage of probability mass is removed (typically 50%) 
-# from observed n-grams and redistributed over unobserved n-grams.
-# 
-# Conventionally, an absolute discount would be used, however we have 
-# found that the proportional discount appears to be robust for 
-# extremely small languages, as might be prototyped by a developer, 
-# as opposed to based on a collected corpus. We have found that 
-# absolute and proportional discounts produce comparable recognition 
-# results with perhaps a slight advantage for proportional 
-# discounting. A more systematic investigation of this technique would 
-# be desirable. In any case it also has the virtue of using a very
-# simple computation.
+# Modified Hybrid quick-lm.pl / simple-lm.pl - Create Language Model & Dictionary
 
-# NOTE: this is by no means an efficient implementation and performance will 
-# deteriorate rapidly as a function of the corpus size. Larger corpora should be
-# processed using the toolkit available at http://www.speech.cs.cmu.edu/SLM_info.html
+# By Ricky Houghton, Alex Hauptmann, Alexander Rudnicky, Andrew Vavrek
 
-# [2feb96] (air)
-# cobbles together a language model from a set of exemplar sentences.
-# features: 1) uniform discounting, 2) no cutoffs
-# the "+" version allows insertion of extra words into the 1gram vector
-
-# [27nov97] (air)
-# bulletproof a bit for use in conjunction with a cgi script
-
-# [20000711] (air)
-# made visible the discount parmeter
-
-# [20011123] (air)
-# cleaned-up version for distribution
+# Begin quick-lm.pl - Create Language Model
 
 use Getopt::Std;
 
@@ -90,17 +16,16 @@ sub handler { local($sig) = @_;
 	    }
 foreach (qw(XCPU KILL TERM STOP)) { $SIG{$_} = \&handler; }
 
-
 if ($#ARGV < 0) { die("usage: quick-lm.pl -s <sentence_file> [-w <word_file>] [-d discount]\n"); }
 Getopt::Std::getopts("s:w:d:x");
+
 $sentfile = $opt_s;
 $wordfile = $opt_w;
 $discount = $opt_d;
 
-$| = 1;  # always flush buffers
+$| = 1;  # Always Flush Buffers
 
 if ($VERBOSE>0) {print STDERR "Language model started at ",scalar localtime(),"\n";}
-
 
 open(IN,"$sentfile") or die("can't open $sentfile!\n");
 if ($wordfile ne "") { open(WORDS,"$wordfile"); $wflag = 1;} else { $wflag = 0; }
@@ -110,42 +35,42 @@ $log10 = log(10.0);
 if ($discount ne "") {
   if (($discount<=0.0) or ($discount>=1.0)) {
     print STDERR "\discount value out of range: must be 0.0 < x < 1.0! ...using 0.5\n";
-    $discount_mass = 0.5;  # just use default
+    $discount_mass = 0.5;  # Use Default
   } else {
     $discount_mass = $discount;
   }
 } else {
-  # Ben and Greg's experiments show that 0.5 is a way better default choice.
-  $discount_mass = 0.5;  # Set a nominal discount...
+  $discount_mass = 0.5;  # 0.5 Is Best Nominal Discount
 }
+
 $deflator = 1.0 - $discount_mass;
 
-# create count tables
+# Create Count Tables
 $sent_cnt = 0;
 while (<IN>) {	 
   s/^\s*//; s/\s*$//;
-  if ( $_ eq "" ) { next; } else { $sent_cnt++; } # skip empty lines
+  if ( $_ eq "" ) { next; } else { $sent_cnt++; } # Skip Empty Lines
   @word = split(/\s/);    
   for ($j=0;$j<($#word-1);$j++) {	
     $trigram{join(" ",$word[$j],$word[$j+1],$word[$j+2])}++;
     $bigram{ join(" ",$word[$j],$word[$j+1])}++;
     $unigram{$word[$j]}++;
   }
-  # finish up the bi and uni's at the end of the sentence...
+  # Complete Bigrams And Unigrams At End Of Sentence
   $bigram{join(" ",$word[$j],$word[$j+1])}++;
   $unigram{$word[$j]}++;
-  
   $unigram{$word[$j+1]}++;
 }
+
 close(IN);
 if ($VERBOSE) { print STDERR "$sent_cnt sentences found.\n"; }
 
-# add in any words
+# Add Words
 if ($wflag) {
   $new = 0; $read_in = 0;
   while (<WORDS>) {
     s/^\s*//; s/\s*$//;
-    if ( $_ eq "" ) { next; }  else { $read_in++; }  # skip empty lines
+    if ( $_ eq "" ) { next; }  else { $read_in++; }  # Skip Empty Lines
     if (! $unigram{$_}) { $unigram{$_} = 1; $new++; }
   }
   if ($VERBOSE) { print STDERR "tried to add $read_in word; $new were new words\n"; }
@@ -156,16 +81,10 @@ if ( ($sent_cnt==0) && ($new==0) ) {
   exit;
 }
 
+# Create Language Model 
 open(LM,">$sentfile.lm") or die("can't open $senfile.lm for output!\n");
 
-$preface = "";
-$preface .= "Language model created by QuickLM on ".`date`;
-$preface .= "Copyright (c) 1996-2002\nCarnegie Mellon University and Alexander I. Rudnicky\n\n";
-$preface .= "This model based on a corpus of $sent_cnt sentences and ".scalar (keys %unigram). " words\n";
-$preface .= "The (fixed) discount mass is $discount_mass\n\n";
-
-
-# compute counts
+# Compute Counts
 $unisum = 0; $uni_count = 0; $bi_count = 0; $tri_count = 0;
 foreach $x (keys(%unigram)) { $uni_count++; $unisum += $unigram{$x}; }
 foreach $x (keys(%bigram))  { $bi_count++; }
@@ -178,12 +97,12 @@ if ( $bi_count > 0 ) { print LM "ngram 2=$bi_count\n"; }
 if ( $tri_count > 0 ) { print LM "ngram 3=$tri_count\n"; }
 print LM "\n";
 
-# compute uni probs
+# Compute Unigram Probabilities
 foreach $x (keys(%unigram)) {
   $uniprob{$x} = ($unigram{$x}/$unisum) * $deflator;
 }
 
-# compute alphas
+# Compute Alphas
 foreach $y (keys(%unigram)) {
   $w1 = $y;
   $sum_denom = 0.0;
@@ -202,13 +121,13 @@ foreach $x (sort keys(%unigram)) {
 }
 print LM "\n";
 
-#compute bi probs
+# Compute Bigram Probabilities
 foreach $x (keys(%bigram)) {
   $w1 = substr($x,0,rindex($x," "));
   $biprob{$x} = ($bigram{$x}*$deflator)/$unigram{$w1};
 }
 
-#compute bialphas
+# Compute Bialphas
 foreach $x (keys(%bigram)) {
   $w1w2 = $x;
   $sum_denom = 0.0;
@@ -221,7 +140,7 @@ foreach $x (keys(%bigram)) {
   $bialpha{$w1w2} = $discount_mass / (1.0 - $sum_denom);
 }
 
-# output the bigrams and trigrams (now that we have the alphas computed).
+# Output Bigrams And Trigrams
 if ( $bi_count > 0 ) {
   print LM "\\2-grams:\n";
   foreach $x (sort keys(%bigram)) {
@@ -248,26 +167,27 @@ if ($VERBOSE>0) { print STDERR "Language model completed at ",scalar localtime()
 
 # End quick-lm.pl
 
-# Begin Modified simple-lm.pl - Create Dictionary File
-# By Ricky Houghton, Alex Hauptmann, Andrew Vavrek
+# Begin simple-lm.pl - Create Dictionary
 
 use Cwd qw();
-my $root_dir = Cwd::cwd();
-print "Root directory: $root_dir \n";
+my $working_dir = Cwd::cwd();
+print "Working directory: $working_dir \n";
 
 $CMU_DICT = "cmudict"; # Name Of CMU Dictionary
-$OUTPUT_NAME = "new"; # Name Of Output Files
+$OUTPUT_NAME = "new"; # Name Of Temporary Output Files
 $NUM_WORDS_TO_KEEP = 3000;  # Maximum Size Of Dictionary
-$INPUT_TEXT = "commands"; # Name Of Input Text File
+$INPUT_TEXT = "commands.txt"; # Name Of Input Text File
 $BIN_DIR = "/usr/bin"; # Location Of cmuclmtk Tools
 
 $input_text = $INPUT_TEXT unless shift;
 $output_name = $OUTPUT_NAME unless shift;
-$language_dir = "/home/vav/lab/lm/oa-test/minds/stella/language";
+$language_dir = "$working_dir/minds/stella/language";
+$lm_name = "language-model";
+$dic_name = "dictionary";
 
 print "Language directory: $language_dir\n";
 
-chdir ("$language_dir") || die "Can't find output directory ($language_dir)";
+chdir ("$language_dir") || die "Can't find language directory: ($language_dir)";
 
 # Create Context Cue .ccs File
 if (! -s "ccs.ccs") {
@@ -329,11 +249,16 @@ while (<VOCAB>) {
 }
 
 close VOCAB;
-
 close OUTPUT;
 
-system ("mv $sentfile.lm $language_dir/lm");
+# End simple-lm.pl
 
-system ("mv $output_name.dic $language_dir/dic");
+# Rename Language Model, Dictionary, Remove Working Files
+
+system ("mv $sentfile.lm $language_dir/$lm_name");
+
+system ("mv $output_name.dic $language_dir/$dic_name");
 
 system ("rm *.ccs *.wfreq *.vocab");
+
+sleep (8)

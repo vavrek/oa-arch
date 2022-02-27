@@ -1,26 +1,30 @@
 # configuration.py - Open Assistant Configuration
 
 import os
+import re
 import json
 from argparse import ArgumentParser, Namespace
 
 class Configuration:
-
+    """OA Configuration"""
+    
     # Setup Directories
     mind_dir = os.environ['MINDDIR']
     ability_dir = os.path.join(mind_dir, 'abilities')
     lang_dir = os.path.join(mind_dir, 'language')
 
-    # Commands File
+    # Command File
     cmd_file = os.path.join(ability_dir, "commands.json")
 
     # Language Model Files
-    lang_file = os.path.join(lang_dir, 'lm')
-    dic_file = os.path.join(lang_dir, 'dic')
+    strings_file = os.path.join(lang_dir, "commands.txt")
+    lang_file = os.path.join(lang_dir, 'language-model')
+    dic_file = os.path.join(lang_dir, 'dictionary')
     history_file = os.path.join(lang_dir, "history")
     hash_file = os.path.join(lang_dir, "hash.json")
 
     def __init__(self):
+
         # Set Up Argument Parser
         self._parser = ArgumentParser()
 
@@ -49,15 +53,17 @@ class Configuration:
                 dest="invalid_sentence_command", action='store',
                 help="Command to run when an invalid sentence is detected")
 
-        # Read Commands File
-        self._read_cmd_file()
+        # Read The Configuration File
+        self._read_options_file()
 
-        # Parse Command-line Arguments, Overriding File As Appropriate
+        # Parse Command-line Arguments, Overriding Config File As Appropriate
         self._parser.parse_args(namespace=self.options)
 
-    def _read_cmd_file(self):
-        with open(self.cmd_file, 'r') as file:
-                self.options = json.load(file)
+    def _read_options_file(self):
+        try:
+            with open(self.cmd_file, 'r') as f:
+                self.options = json.load(f)
                 self.options = Namespace(**self.options)
-
-
+        except FileNotFoundError:
+            # MAke An Empty Options Namespace
+            self.options = Namespace()

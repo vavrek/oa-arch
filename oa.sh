@@ -4,28 +4,28 @@
 
 # Global Settings
 
-export ADDRESS="info@openassistant.org"
+export ADDRESS="your@address.com"
 export AUDIOPLAYER="aplay"
-export BROWSER="qutebrowser"
+export BROWSER="libreworf"
 export CLICK="xdotool click"
 export EDITOR="subl"
 export EMAIL="thunderbird"
 export FILE="thunar"
 export KEY="xdotool key"
-export KILL="pkill -f "
+export KILL="pkill -o -f "
 export LAUNCH="python3 ./oa.py -c -m 0"
+export MASTERPASS="password"
 export MINDDIR="$PWD/minds/stella"
 export OADDIR="$PWD"
+export PASSWORD="password"
 export SEARCHFILES="catfish"
 export SEARCHWEB="https://duckduckgo.com"
 export STATUS="bpytop"
 export TYPE="xdotool type"
 export USERNAME=$(whoami)
-export VOICE="flite -voice slt --setf int_f0_target_mean=263 --setf duration_stretch=1.22 --setf int_f0_target_stddev=27"
+export VOICE="flite -voice slt --setf int_f0_target_mean=263 --setf duration_stretch=1.11 --setf int_f0_target_stddev=27"
 export TERMINAL="xfce4-terminal --maximize"
 
 # Launch Open Assistant
 
-# $MINDDIR/language/quick-lm.pl -s $MINDDIR/language/commands;
-
-python3 ./oa.py -c -m 0;
+python3 ./oa.py -c -m 0

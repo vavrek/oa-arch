@@ -2,6 +2,7 @@
 
 import os
 import sys
+import subprocess
 from .recognizer import Recognizer
 from .configuration import Configuration
 
@@ -16,6 +17,9 @@ class Assistant:
         self.config = Configuration()
         self.options = vars(self.config.options)
         self.commands = self.options['commands']
+
+        # Create Strings File
+        self.create_strings_file()
         
         # Optional: History
         if self.options['history']:
@@ -47,7 +51,6 @@ class Assistant:
     def run_command(self, cmd):
         """ Print Command And Run """
         print("\x1b[32m< ! >\x1b[0m", cmd)
-
         self.recognizer.pause()
         os.system(cmd)
         self.recognizer.listen()
@@ -60,20 +63,18 @@ class Assistant:
             # Run 'valid_sentence_command' If Set
             os.system('clear')
             print("Stella: \x1b[32mSpeaking\x1b[0m")
-
             if self.options['valid_sentence_command']:
                 os.system(self.options['valid_sentence_command'])
-
+                #subprocess.call(self.options['valid_sentence_command'],
+                                #shell=True)
             cmd = self.commands[t]
 
             # Should We Be Passing Words?
             os.system('clear')
             print("Stella: \x1b[32mSpeaking\x1b[0m")
-
             if self.options['pass_words']:
                 cmd += " " + t
             print("\x1b[32m< ! >\x1b[0m {0}".format(t))
-
             self.run_command(cmd)
             self.log_history(text)
         
