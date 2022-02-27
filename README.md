@@ -6,7 +6,7 @@ Open Assistant is an open source voice assistant able to complete operating syst
 
 Written in Python, Open Assistant uses a number of bash shell scripts and is able to function entirely offline. 
 
-Speech recognition and updating language model files is enabled locally, without internet access. 
+Speech recognition and updating language model files are enabled locally, without internet access. 
 
 Commands and vocal recordings never leave the machine. 
 
