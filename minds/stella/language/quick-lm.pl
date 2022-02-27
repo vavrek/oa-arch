@@ -260,5 +260,3 @@ system ("mv $sentfile.lm $language_dir/$lm_name");
 system ("mv $output_name.dic $language_dir/$dic_name");
 
 system ("rm *.ccs *.wfreq *.vocab");
-
-sleep (8)
