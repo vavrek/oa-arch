@@ -39,18 +39,15 @@ find ./ -name "*.sh" -exec chmod +x {} \; find ./ -name "*.py" -exec chmod +x {}
 ```
 Install required packages:
 ```
-sudo pacman -S flite gobject-introspection gstreamer gst-plugins-base-libs python3 xclip xdotool
+sudo pacman -S flite gobject-introspection gstreamer gst-plugins-base-libs perl python3 xclip xdotool
 ```
 ```
 pip install requests gobject
 ```
-Use ``yay`` to install ``pocketsphinx`` and ``sphinxbase``:
+Use ``yay`` to install ``pocketsphinx``, ``sphinxbase``, and ``cmuclmtk``:
 ```
-yay pocketsphinx
-```
-```
-yay sphinxbase
-```
+yay pocketsphinx && yay sphinxbase && yay cmuclmtk
+``` 
 KDE / Konsole users will also require ``qt-gstreamer``:
 ```
 yay qt-gstreamer
