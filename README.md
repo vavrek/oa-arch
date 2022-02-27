@@ -8,7 +8,9 @@ Written in Python, Open Assistant also uses a number of bash shell scripts and i
 
 Speech recognition and updating language model files is managed internally, without internet access. 
 
-Commands and vocal recordings never leave the machine. 100% privacy.
+Commands and vocal recordings never leave the machine. 
+
+100% user privacy.
 
 ## Video Demonstrations
 Version 0.00:
