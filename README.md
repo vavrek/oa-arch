@@ -84,26 +84,26 @@ Need help? Feel free to submit an issue or send an email:
 [info@openassistant.org](mailto:info@openassistant.org)
 
 ## Contributing
-Open Assistant is a unique and valuable project which could benefit anyone disabled, young, or elderly, as well as anyone who likes to take a break from the mouse and keyboard, from time to time.
+Open Assistant is a unique and valuable project which would benefit anyone disabled, young, or elderly, as well as anyone who likes to take a break from traditional mouse and keyboard, from time to time.
 
-Let's make computing more fun, convenient, private, and accessible!
+Let's make computing more convenient, fun, private, and accessible!
 
 Hack away, friends! :)
 
 ## Roadmap
 Include a local language model toolkit, so Open Assistant will not require internet access to update commands. (COMPLETE!)
 
-Offline speech dictation (Under development).
+Offline speech dictation. (Under Current Development)
 
 New demo video coming soon!
 
 Compile installation steps listed above into one ``install-arch.sh`` script, then create various installation scrips for other distributions, such as ``install-debian.sh``, ``install-bsd.sh``, etc.
 
-Map voice commands to all available keyboard shortcuts and key characters.
+Map vocal commands to all available keyboard shortcuts and key characters.
 
-Generate specific command files for popular Window Managers.
+Generate specific command files for common Window Managers.
 
-Creating package installers and get OA into common repositories.
+Creating package installers and get OA into popular repositories.
 
 GUI design using Kivy.
 
