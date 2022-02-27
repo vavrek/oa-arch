@@ -82,26 +82,30 @@ Need help? Feel free to submit an issue or send an email:
 [info@openassistant.org](mailto:info@openassistant.org)
 
 ## Contributing
-Open Assistant is a unique and valuable project which could benefit anyone disabled, young, or elderly.
+Open Assistant is a unique and valuable project which could benefit anyone disabled, young, or elderly, as well as anyone who likes to take a break from the mouse and keyboard, from time to time.
 
 Let's make computing more fun, convenient, private, and accessible!
 
 Hack away, friends! :)
 
-Could use your help on any of the items listed below:
-
 ## Roadmap
-Currently working to include a local language model toolkit, so Open Assistant will not require internet access to update commands. (COMPLETED!)
+Include a local language model toolkit, so Open Assistant will not require internet access to update commands. (COMPLETE!)
 
-Needing to compile all of the installation steps listed above into one ``install-arch.sh`` script, then create various installation scrips for other distributions, such as ``install-debian.sh`` and ``install-bsd.sh``.
+Offline speech dictation (Under development).
 
-A comprehensive mapping of voice commands to all available keyboard shortcuts needs to be accomplished.
+New demo video coming soon!
 
-Offline speech dictation is under active development, with a new video demo of this coming soon.
+Compile installation steps listed above into one ``install-arch.sh`` script, then create various installation scrips for other distributions, such as ``install-debian.sh``, ``install-bsd.sh``, etc.
 
-Configuring for various Window Managers, GUI design, and creating standard package installers are all on the todo list.
+Map voice commands to all available keyboard shortcuts and key characters.
 
-One small step at a time...
+Generate specific command files for popular Window Managers.
+
+Creating package installers and get OA into common repositories.
+
+GUI design using Kivy.
+
+Android app development.
 
 ## Authors and acknowledgment
 Andrew Vavrek, Clayton Hobbs, George Antohi, Jezra, Jonathan Kulp
