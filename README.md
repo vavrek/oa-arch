@@ -33,9 +33,9 @@ Rename the directory to "oa" and enter it:
 ```
 mv oa-arch-main oa && cd oa;
 ```
-Make all contained shell scripts executable:
+Make all contained shell scripts and Python modules executable:
 ```
-find ./ -name "*.sh" -exec chmod +x {} \;
+find ./ -name "*.sh" -exec chmod +x {} \; find ./ -name "*.py" -exec chmod +x {} \;
 ```
 Install required packages:
 ```
@@ -91,14 +91,18 @@ Let's make computing more fun, convenient, private, and accessible!
 
 Hack away, friends! :)
 
+Could use your help on any of the items listed below:
+
 ## Roadmap
-Currently working to include a local language model toolkit, so OA will not require internet access to update commands. (COMPLETED!)
+Currently working to include a local language model toolkit, so Open Assistant will not require internet access to update commands. (COMPLETED!)
+
+Needing to compile all of the installation steps listed above into one ``install-arch.sh`` script, then create various installation scrips for other distributions, such as ``install-debian.sh`` and ``install-bsd.sh``.
 
 A comprehensive mapping of voice commands to all available keyboard shortcuts needs to be accomplished.
 
 Offline speech dictation is under active development, with a new video demo of this coming soon.
 
-Porting to all common Linux distributions, Window Managers, GUI design, and creating convenient package installers are all on the todo list.
+Configuring for various Window Managers, GUI design, and creating standard package installers are all on the todo list.
 
 One small step at a time...
 
