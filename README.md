@@ -4,9 +4,9 @@ Open Source Voice Assistant - Make Your Own Minds
 ## Description
 Open Assistant is an open source voice assistant able to complete operating system tasks using spoken commands.
 
-Written in Python, Open Assistant also uses a number of bash shell scripts and is able to function entirely offline. 
+Written in Python, Open Assistant uses a number of bash shell scripts and is able to function entirely offline. 
 
-Speech recognition and updating language model files is managed internally, without internet access. 
+Speech recognition and updating language model files is enabled locally, without internet access. 
 
 Commands and vocal recordings never leave the machine. 
 
@@ -76,7 +76,7 @@ Vocal commands and abilities are found in: ``minds/stella/abilities/commands.jso
 
 After changing the commands file, reset OA, say **Update Commands**, then reset again. 
 
-User specific system configuration is located in: ``oa.sh``
+User specific configuration is located in: ``oa.sh``
 
 ## Support
 Need help? Feel free to submit an issue or send an email:
@@ -84,26 +84,26 @@ Need help? Feel free to submit an issue or send an email:
 [info@openassistant.org](mailto:info@openassistant.org)
 
 ## Contributing
-Open Assistant is a unique and valuable project which would benefit anyone disabled, young, or elderly, as well as anyone who likes to take a break from traditional mouse and keyboard, from time to time.
+Open Assistant is a unique and valuable project which would epecially benefit anyone disabled, young, or elderly, as well as those of us to take a break from traditional mouse and keyboard, from time to time.
 
-Let's make computing more convenient, fun, private, and accessible!
+The combination of keyboard, mouse, and microphone is quite powerful.
+
+Make computing more convenient, fun, private, and accessible!
 
 Hack away, friends! :)
 
 ## Roadmap
 Include a local language model toolkit, so Open Assistant will not require internet access to update commands. (COMPLETE!)
 
-Offline speech dictation. (Under Current Development)
+Offline speech dictation. (Under current development: New demo video coming soon!)
 
-New demo video coming soon!
-
-Compile installation steps listed above into one ``install-arch.sh`` script, then create various installation scrips for other distributions, such as ``install-debian.sh``, ``install-bsd.sh``, etc.
+Compile installation steps listed above into one ``install-arch.sh`` script, then create various install scrips for other distributions, such as ``install-debian.sh``, ``install-bsd.sh``, etc.
 
 Map vocal commands to all available keyboard shortcuts and key characters.
 
 Generate specific command files for common Window Managers.
 
-Creating package installers and get OA into popular repositories.
+Create package installers and get Open Assistant into all popular repositories.
 
 GUI design using Kivy.
 
